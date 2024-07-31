@@ -29,9 +29,10 @@ void List::show()
 
     while (current != nullptr)
     {
-        cout << current->m_data;
+        cout << current->m_data << '\t';
         current = current->m_next;
     }
+    cout << endl;
 }
 
 void List::deleteNode(int position)
