@@ -49,7 +49,7 @@ void List::deleteNode(int position)
         return;
     }
     // идем по списку, пока не найдем узел со значением данных, равных счётчику
-    while (counter != position)
+    while (counter != position && temp != nullptr)
     {
         prev = temp;
         temp = temp->m_next;
@@ -57,7 +57,10 @@ void List::deleteNode(int position)
     }
     // если узел не найден, возвращаем
     if (!temp)
+    {
+        std::cout << "The element goes beyond the limit" << std::endl;
         return;
+    }
     // меняем указатель следующего узла для предыдущего узла на узел, следующий за удаляемым узлом, и удаляем узел с данными
     prev->m_next = temp->m_next;
     delete temp;

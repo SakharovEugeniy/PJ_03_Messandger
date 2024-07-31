@@ -13,8 +13,7 @@ int main()
 
 	myList.show();
 
-	std::cout << "Delete element whith index 2\n" << std::endl;
-	myList.deleteNode(2);
+	myList.deleteNode(100);
 
 	myList.show();
 
