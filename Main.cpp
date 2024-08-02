@@ -13,6 +13,10 @@ int main()
 
 	myList.show();
 
+	myList.deleteNode(1);
+
+	myList.show();
+
 	myList.deleteNode(100);
 
 	myList.show();
